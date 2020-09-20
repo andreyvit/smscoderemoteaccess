@@ -1,0 +1,13 @@
+{
+    "app_title": "СМС-код",
+    "debug": true,
+    "port": 7001,
+    "users": {
+        "foo": {
+            "password": "XXXXXXXXXXXXXXXXXXXXXXXX"
+        },
+        "bar": {
+            "password": "XXXXXXXXXXXXXXXXXXXXXXXX"
+        }
+    }
+}
