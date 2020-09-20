@@ -38,6 +38,7 @@ func LoadMessages(f func(sms Message)) error {
 	if err != nil {
 		return err
 	}
+	defer db.Close()
 
 	rows, err := db.Query("SELECT h.uncanonicalized_id, m.text, m.date FROM message m INNER JOIN handle h ON m.handle_id = h.rowid WHERE m.service = 'SMS' AND h.uncanonicalized_id IS NOT NULL AND m.text IS NOT NULL ORDER BY m.date DESC LIMIT 10000")
 	if err != nil {
